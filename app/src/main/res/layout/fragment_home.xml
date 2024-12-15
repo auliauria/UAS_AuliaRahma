@@ -1,0 +1,47 @@
+<!-- res/layout/activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/pink">
+
+
+    <TextView
+        android:id="@+id/header_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Aneka Resep"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="24dp"/>
+    <TextView
+        android:id="@+id/header_txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:text="Dapur Mama"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="24dp"/>
+
+    <!-- RecyclerView and Bottom Navigation as before -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUser"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header_txt2"
+        android:visibility="gone"/>
+
+</LinearLayout>

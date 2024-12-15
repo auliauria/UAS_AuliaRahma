@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.UpdateActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pink"
+        android:padding="24dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/dapurmama"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/addTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Resep Dapur Mama"
+            android:gravity="center_horizontal"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/judulLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Judul Resep"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@id/addTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:endIconMode="none">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/judulResep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:drawablePadding="10dp"
+                android:textSize="16sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pemilikLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Pemilik Resep"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/judulLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:endIconMode="none">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pemilikResep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:drawablePadding="10dp"
+                android:textSize="16sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Image Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/imageInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Upload Image"
+            android:layout_marginTop="16dp"
+            app:endIconMode="custom"
+            app:layout_constraintTop_toBottomOf="@id/pemilikLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/imageInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:drawablePadding="10dp"
+                android:focusable="false"
+                android:clickable="true"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Detail Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/detailresepLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Detail"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/imageInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/detailResep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="4"
+                android:maxLines="6"
+                android:gravity="top"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:drawablePadding="10dp"
+                android:textSize="16sp"
+                android:scrollbars="vertical"
+                android:overScrollMode="always" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/pinkeau"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
